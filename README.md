@@ -91,7 +91,7 @@ On va choisir la version Server qui est la plus sûre dans un environnement de p
 
 Il nous faudra des NuGets : 
 
-![Capture d’écran 2021-02-06 210805.png](../master/pictures/Capture d'écran 2021-02-06 210805.png)
+![nug.png](../master/pictures/nug.png)
 
 On sera vigilant au fait d'utiliser la version 3.1.11 de Microsoft.EntityFrameworkCore.Tools car les versions suivantes sont basées sur .Net Core 5.
 
