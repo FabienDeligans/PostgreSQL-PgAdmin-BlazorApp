@@ -257,7 +257,7 @@ Ensuite on va créer la base de données par la commande :
 
 ``update-database``
 
-**Et voilà, votre application est prête à utiliser MySQL.**
+**Et voilà, votre application est prête à utiliser PostgreSQL.**
 
 
 
