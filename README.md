@@ -106,7 +106,7 @@ Chaque enfant ou parent appartient obligatoirement à une famille.
 On crée les modèles ainsi.
 
 ```c#
-namespace MySqlBlazorApp.Models
+namespace PostgreSQLBlazorApp.Models
 {
     public interface IEntity
     {
@@ -118,7 +118,7 @@ namespace MySqlBlazorApp.Models
 ```c#
 using System.Collections.Generic;
 
-namespace MySqlBlazorApp.Models
+namespace PostgreSQLBlazorApp.Models
 {
     public class Famille : IEntity
     {
@@ -133,7 +133,7 @@ namespace MySqlBlazorApp.Models
 ```c#
 using System;
 
-namespace MySqlBlazorApp.Models
+namespace PostgreSQLBlazorApp.Models
 {
     public class Enfant : IEntity
     {
@@ -162,7 +162,7 @@ namespace MySqlBlazorApp.Models
 ```c#
 using System.ComponentModel.DataAnnotations;
 
-namespace MySqlBlazorApp.Models
+namespace PostgreSQLBlazorApp.Models
 {
     public class Parent : IEntity
     {
@@ -184,9 +184,9 @@ On va créer ensuite le Context de la base de données. Ceci permettra d'y accé
 
 ```c#
 using Microsoft.EntityFrameworkCore;
-using MySqlBlazorApp.Models;
+using PostgreSQLBlazorApp.Models;
 
-namespace MySqlBlazorApp.Data
+namespace PostgreSQLBlazorApp.Data
 {
     public class Context : DbContext
     {
@@ -269,8 +269,8 @@ Remplacer le code par :
 
 ```c#
 @page "/"
-@using MySqlBlazorApp.Data
-@using MySqlBlazorApp.Models
+@using PostgreSQLBlazorApp.Models
+@using PostgreSQLBlazorApp.Data
 // TODO Inject context
 @inject Context Context
 
@@ -303,8 +303,8 @@ Nb Family : <input value="@Count"/>
 }
 ```
 
-![2021-02-06 211043](../master/pictures/2021-02-06 211043.png)
+![2021-02-06 211043.png](../master/pictures/2021-02-06 211043.png)
 
 Lorsque l'on clique sur le bouton "Create family", on crée et on enregistre une famille dans la base de données. La balise input affiche le compte de famille dans la base de données. 
 
-![image-20210206184615442](../master/pictures/image-20210206184615442.png)
+![image-20210206184358933.png](../master/pictures/image-20210206184358933.png)

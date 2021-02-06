@@ -1,7 +1,32 @@
 ﻿@page "/"
+@using PostgreSQLBlazorApp.Models
+@using PostgreSQLBlazorApp.Data
+@inject Context Context
 
-<h1>Hello, world!</h1>
+<button @onclick="Create">Create family</button>
+Nb Family : <input value="@Count"/>
 
-Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code
+{
+    private int Count { get; set; } 
+    protected override void OnInitialized()
+    {
+    // TODO => use Context to access database or create controller
+        Count = Context.Famille.Count(); 
+    }
+
+    private void Create()
+    {
+        var fam = new Famille
+        {
+            NomDeFamille = "deligans"
+        };
+        Context.Famille.Add(fam);
+        Context.SaveChanges(); 
+        
+        Count = Context.Famille.Count(); 
+
+        InvokeAsync(StateHasChanged); 
+    }
+}
