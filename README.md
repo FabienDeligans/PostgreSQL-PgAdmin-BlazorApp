@@ -303,8 +303,8 @@ Nb Family : <input value="@Count"/>
 }
 ```
 
-![2021-02-06 211043.png](../master/pictures/2021-02-06 211043.png)
+![pgadmin.png](../master/pictures/pgadmin.png)
 
 Lorsque l'on clique sur le bouton "Create family", on crée et on enregistre une famille dans la base de données. La balise input affiche le compte de famille dans la base de données. 
 
-![image-20210206184358933.png](../master/pictures/image-20210206184358933.png)
+![postgresqlapp.png](../master/pictures/postgresqlapp.png)
